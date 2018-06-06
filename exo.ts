@@ -1,4 +1,4 @@
-//1-tablo d not
+//1-tableau notes
 let tabNotes : number[] = [19, 15, 13.5 , 18, 7, 8];
 
 function calculMoyenne(tab : number[]) : number{
@@ -53,7 +53,7 @@ let PersonneNulle = {
 };
 console.log(PersonneNulle.nomComplet());
 
-//4- objé nul mais bien
+//4- objet mieux
 class Personne{
     nom:string;
     prenom:string;
@@ -70,7 +70,7 @@ class Personne{
 let Michel : Personne = new Personne("Michel","Schmorgl",new Date());
 console.log(Michel.nomComplet());
 
-//5- interrfasse
+//5- interface
 interface Surface2D{
     aire : () => number;
     perimetre : () => number;
@@ -96,3 +96,50 @@ class Carre extends Rectangle{
         super(cote,cote);
     }
 }
+
+//6- interface INSTANCIABLE
+interface maStructureDeDonnees{
+    x : number;
+    y : number;
+    rayon? : number;
+}
+
+let struct1 : maStructureDeDonnees = {
+    x: 20,
+    y: 10
+}
+console.log(struct1);
+let struct2 : maStructureDeDonnees = {
+    x: 40,
+    y: 20,
+    rayon: 120
+}
+console.log(struct2);
+
+//7- EnUm
+enum Color{ "Blue", "Red", "Green", "Yellow", "Purple", "Orange", "Pink"}
+let colNb : number = Color.Yellow;
+let col : Color = Color.Green;
+console.log(col);
+console.log(Color[colNb]);
+
+//8- tableau
+let tabVal : number[] = [15, 50, 48, 42, 55, 189];
+console.log(tabVal);
+let tabVal2 = [15, 50, 48, 42, 55, 189];
+console.log(tabVal2);
+let tabVal3 = [1, true, "three"];
+console.log(tabVal3);
+let tabVal4 : string[10];
+console.log(tabVal4);
+
+//9- 
+var myUnionVar: string | number | boolean;
+console.log('myUnionVar before setting a value = ' + myUnionVar);
+myUnionVar = 5;
+console.log('typeof myUnionVar = ' + typeof myUnionVar);
+let unionVar2 : number | number[];
+unionVar2 = 2;
+console.log('typeof unionVar2 = ' + typeof unionVar2);
+unionVar2 = [2, 58, 45, 12];
+console.log('typeof unionVar2 = ' + typeof unionVar2);

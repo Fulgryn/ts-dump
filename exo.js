@@ -8,7 +8,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-//1-tablo d not
+//1-tableau notes
 var tabNotes = [19, 15, 13.5, 18, 7, 8];
 function calculMoyenne(tab) {
     var somme = tab.reduce(function (s, e) { return s += e; });
@@ -58,7 +58,7 @@ var PersonneNulle = {
     }
 };
 console.log(PersonneNulle.nomComplet());
-//4- objé nul mais bien
+//4- objet mieux
 var Personne = /** @class */ (function () {
     function Personne(nom, prenom, dateNaissance) {
         this.nom = nom;
@@ -92,3 +92,48 @@ var Carre = /** @class */ (function (_super) {
     }
     return Carre;
 }(Rectangle));
+var struct1 = {
+    x: 20,
+    y: 10
+};
+console.log(struct1);
+var struct2 = {
+    x: 40,
+    y: 20,
+    rayon: 120
+};
+console.log(struct2);
+//7- EnUm
+var Color;
+(function (Color) {
+    Color[Color["Blue"] = 0] = "Blue";
+    Color[Color["Red"] = 1] = "Red";
+    Color[Color["Green"] = 2] = "Green";
+    Color[Color["Yellow"] = 3] = "Yellow";
+    Color[Color["Purple"] = 4] = "Purple";
+    Color[Color["Orange"] = 5] = "Orange";
+    Color[Color["Pink"] = 6] = "Pink";
+})(Color || (Color = {}));
+var colNb = Color.Yellow;
+var col = Color.Green;
+console.log(col);
+console.log(Color[colNb]);
+//8- tableau
+var tabVal = [15, 50, 48, 42, 55, 189];
+console.log(tabVal);
+var tabVal2 = [15, 50, 48, 42, 55, 189];
+console.log(tabVal2);
+var tabVal3 = [1, true, "three"];
+console.log(tabVal3);
+var tabVal4;
+console.log(tabVal4);
+//9- 
+var myUnionVar;
+console.log('myUnionVar before setting a value = ' + myUnionVar);
+myUnionVar = 5;
+console.log('typeof myUnionVar = ' + typeof myUnionVar);
+var unionVar2;
+unionVar2 = 2;
+console.log('typeof unionVar2 = ' + typeof unionVar2);
+unionVar2 = [2, 58, 45, 12];
+console.log('typeof unionVar2 = ' + typeof unionVar2);
